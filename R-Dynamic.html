@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<body>
+
+<nav class="w3-bar w3-black">
+  <a href="/index" class="w3-button w3-bar-item">Summary</a>
+  <a href="/R-animations" class="w3-button w3-bar-item">Static Visualizations</a>
+  <a href="/R-Dynamic" class="w3-button w3-bar-item">Dynamic visualizations</a>
+  <a href="#Python-applications" class="w3-button w3-bar-item">Python applications</a>
+  <a href="#Tableau-visualizations" class="w3-button w3-bar-item">Tableau visualizations</a>
+</nav>
+
+<!-- Band Description -->
+
+<section class="w3-container" style="max-width:600px">
+ <h2 class="w3-wide">Dynamic Visualizations in R</h2>
+ <p> 1. <a href="/ConflictTreePlotFinal.html"> Visualizaing conflict models through collapsible tree plots in R </a></p>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="https://www.facebook.com/profile.php?id=100008896215374"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://www.linkedin.com/in/kanishkan91/"><i class="fa fa-linkedin"></i></a>
+  <a href="https://github.com/kanishkan91"><i class="fa fa-github"></i></a>
+  <p class="w3-medium">
+  Powered by <a href="https://kanishkan91.shinyapps.io/NetworkVisualizationapp/" target="_blank">Rshiny</a>
+  </p>
+</footer>
+
+
+<script>
+// Automatic Slideshow - change image every 5 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 5000);
+}
+</script>
+
+</body>
+</html>
