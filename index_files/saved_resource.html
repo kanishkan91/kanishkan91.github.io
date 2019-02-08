@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- saved from url=(0099)file:///C:/Users/kanis/OneDrive/Desktop/MyWeb/kanishkan91.github.io/index_files/saved_resource.html -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--<base href="_w_d2fba788/">--><!--<base href=".">--><base href=".">
+    <script type="text/javascript">
+(function() {
+  var workerId = '_w_d2fba788';
+  // remove base href if worker ID is in url
+  if (window.location.href.indexOf(workerId) > 0) {
+    document.querySelector('base').removeAttribute('href');
+  }
+})();
+</script>
+
+      <script type="text/javascript">
+      var __connect = {
+        shinyPre101: false
+      }
+      </script>
+      
+
+  
+  <script type="application/shiny-singletons"></script>
+  <script type="application/html-dependencies">json2[2014.02.04];jquery[1.12.4];shiny[1.2.0];selectize[0.11.2];htmlwidgets[1.3];vis[4.20.1];visNetwork-binding[2.0.4];bootstrap[3.3.7]</script>
+<script src="./json2-min.js.download"></script>
+<script src="./jquery.min.js.download"></script>
+<link href="./shiny.css" rel="stylesheet">
+<script src="./shiny.min.js.download"></script>
+<link href="./selectize.bootstrap3.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="shared/selectize/js/es5-shim.min.js"></script>
+<![endif]-->
+<script src="./selectize.min.js.download"></script>
+<script src="./htmlwidgets.js.download"></script>
+<link href="./vis.css" rel="stylesheet">
+<script src="./vis.min.js.download"></script>
+<script src="./visNetwork.js.download"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./bootstrap.min.css" rel="stylesheet">
+<script src="./bootstrap.min.js.download"></script>
+<script src="./html5shiv.min.js.download"></script>
+<script src="./respond.min.js.download"></script>  <title>Understanding the International Futures system through network analysis</title>
+
+<script src="./sockjs-0.3.min.js.download"></script>
+<script src="./shiny-server-client.js.download"></script>
+<script>preShinyInit({reconnect:false,reconnectTimeout:0,disableProtocols:["xdr-streaming","xdr-polling","websocket"],transportDebugging:false,token:true,workerId:true,subappTag:true,extendSession:true,fixupInternalLinks:true});</script>
+<link rel="stylesheet" type="text/css" href="./rstudio-connect.css">
+<link rel="stylesheet" type="text/css" href="./shinyapps.css"><style type="text/css">div.vis-tooltip {display : none}</style><link rel="stylesheet" type="text/css" href="file:///C:/__static__/frontend/css/shinyapps.css"></head>
+
+<body>
+<script type="text/javascript" src="./iframeResizer.contentWindow.min.js.download"></script>
+<script type="text/javascript" src="./shinyapps.frame.content.js.download"></script>
+<script type="text/javascript" src="./shinyapps.js.download"></script>
+
+  <div class="container-fluid">
+    <h2>Understanding the International Futures system through network analysis</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <form class="well">
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="View-selectized">Select View</label>
+            <div>
+              <select id="View" class="form-control selectized shiny-bound-input" tabindex="-1" style="display: none;"><option value="Individual Model View" selected="selected">Individual Model View</option></select><div class="selectize-control form-control selectized shiny-bound-input single"><div class="selectize-input items full has-options has-items"><div class="item" data-value="Individual Model View">Individual Model View</div><input type="text" autocomplete="off" tabindex="-1" id="View-selectized" class="shiny-bound-input" style="width: 4px;"></div><div class="selectize-dropdown single form-control selectized shiny-bound-input" style="display: none;"><div class="selectize-dropdown-content"></div></div></div><div class="selectize-control form-control single"><div class="selectize-input items full has-options has-items"><div class="item" data-value="Individual Model View">Individual Model View</div><input type="text" autocomplete="off" tabindex="" id="View-selectized" class="shiny-bound-input" style="width: 4px;"></div><div class="selectize-dropdown single form-control" style="display: none;"><div class="selectize-dropdown-content"></div></div></div>
+              <script type="application/json" data-for="View">{}</script>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="Model-selectized">Please Select Model</label>
+            <div>
+              <select id="Model" class="form-control selectized shiny-bound-input" multiple="multiple" tabindex="-1" style="display: none;"><option value="Agriculture" selected="selected">Agriculture</option></select><div class="selectize-control form-control selectized shiny-bound-input multi"><div class="selectize-input items not-full has-options has-items"><div class="item" data-value="Agriculture">Agriculture</div><input type="text" autocomplete="off" tabindex="-1" id="Model-selectized" class="shiny-bound-input" style="width: 4px;"></div><div class="selectize-dropdown multi form-control selectized shiny-bound-input" style="display: none;"><div class="selectize-dropdown-content"></div></div></div><div class="selectize-control form-control multi"><div class="selectize-input items not-full has-options has-items"><div class="item" data-value="Agriculture">Agriculture</div><input type="text" autocomplete="off" tabindex="" id="Model-selectized" class="shiny-bound-input" style="width: 4px;"></div><div class="selectize-dropdown multi form-control" style="display: none;"><div class="selectize-dropdown-content"></div></div></div>
+              <script type="application/json" data-for="Model">{}</script>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="Items-selectized">Select items for display</label>
+            <div>
+              <select id="Items" tabindex="-1" class="selectized shiny-bound-input" style="display: none;"><option value="Variables only" selected="selected">Variables only</option></select><div class="selectize-control selectized shiny-bound-input single"><div class="selectize-input items full has-options has-items"><div class="item" data-value="Variables only">Variables only</div><input type="text" autocomplete="off" tabindex="-1" id="Items-selectized" class="shiny-bound-input" style="width: 4px;"></div><div class="selectize-dropdown single selectized shiny-bound-input" style="display: none;"><div class="selectize-dropdown-content"></div></div></div><div class="selectize-control single"><div class="selectize-input items full has-options has-items"><div class="item" data-value="Variables only">Variables only</div><input type="text" autocomplete="off" tabindex="" id="Items-selectized" class="shiny-bound-input" style="width: 4px;"></div><div class="selectize-dropdown single" style="display: none;"><div class="selectize-dropdown-content"></div></div></div>
+              <script type="application/json" data-for="Items" data-nonempty="">{}</script>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-8">
+        <p>This visualization helps us understand the composition of the International Futures Model. The dots represent variables while the boxes represent parameters. The sizes of the variables and the parameters are determined on the basis of the number of connections these variables and parameters share with the rest of the model.</p>
+        <p>The user can make use of multiple options. The Select View option enables the user to select either a Quilt View which provides an overview of the different systems in IFs, The sub-model view that enables a user to view interactions between sub-models and the Individual Model View which enables the user to look at components of individual models. Please click on the Store positions option at the bottom to stabilize the visualization.</p>
+        <div id="network" style="width: 900px; height: 900px; visibility: inherit; background: rgba(0, 0, 0, 0);" class="visNetwork html-widget html-widget-output shiny-bound-output"><div id="titlenetwork" style="font-family: Georgia, &quot;Times New Roman&quot;, Times, serif; font-weight: bold; font-size: 20px; text-align: center; display: none;"></div><div id="subtitlenetwork" style="font-family: Georgia, &quot;Times New Roman&quot;, Times, serif; font-size: 12px; text-align: center; display: none;"></div><select class="dropdown shiny-bound-input" id="nodeSelectnetwork" style="width: 150px; height: 26px; display: inline;"><option value="">Select by id</option><option value="AGDEM">AGDEM</option><option value="AGFISHCATCH">AGFISHCATCH</option><option value="AGLOSSPROD">AGLOSSPROD</option><option value="AGLOSSTRANS">AGLOSSTRANS</option><option value="AGM">AGM</option><option value="AGMVALUE">AGMVALUE</option><option value="AGP">AGP</option><option value="AGPMILKEGGS">AGPMILKEGGS</option><option value="AGX">AGX</option><option value="AGXVALUE">AGXVALUE</option><option value="AQUACUL">AQUACUL</option><option value="C">C</option><option value="CDALF">CDALF</option><option value="CIVDM">CIVDM</option><option value="CLAVAL">CLAVAL</option><option value="CLD">CLD</option><option value="CLPC">CLPC</option><option value="CS">CS</option><option value="CULTREG">CULTREG</option><option value="ENVYLCHG">ENVYLCHG</option><option value="ENVPRCHG">ENVPRCHG</option><option value="FDEM">FDEM</option><option value="FEDDEM">FEDDEM</option><option value="FMDEM">FMDEM</option><option value="FPRI">FPRI</option><option value="FSTOCK">FSTOCK</option><option value="GDP">GDP</option><option value="GDPPCP">GDPPCP</option><option value="GLDCAP">GLDCAP</option><option value="GRAMSPC">GRAMSPC</option><option value="HHINC">HHINC</option><option value="I">I</option><option value="LANDAREA">LANDAREA</option><option value="LANDIRAREAEQUIP">LANDIRAREAEQUIP</option><option value="IDS">IDS</option><option value="LANDIRAREASAT">LANDIRAREASAT</option><option value="INAG">INAG</option><option value="INDEM">INDEM</option><option value="INFMOR">INFMOR</option><option value="tgrld">tgrld</option><option value="TGRYL">TGRYL</option><option value="LANDIRAREAACTUAL">LANDIRAREAACTUAL</option><option value="KAG">KAG</option><option value="LABS">LABS</option><option value="LD">LD</option><option value="lks">lks</option><option value="LVHERD">LVHERD</option><option value="MALNPOPP">MALNPOPP</option><option value="MFPRATE">MFPRATE</option><option value="MIGRANTS">MIGRANTS</option><option value="POP">POP</option><option value="POPR">POPR</option><option value="WAP">WAP</option><option value="WATPRICE">WATPRICE</option><option value="WEP">WEP</option><option value="WGDP">WGDP</option><option value="WPOP">WPOP</option><option value="YL">YL</option><option value="YTHBULGE">YTHBULGE</option><option value="ASAGDP">ASAGDP</option><option value="ASALAB">ASALAB</option><option value="ASAPOP">ASAPOP</option><option value="ASARAW">ASARAW</option><option value="CARFOROTH">CARFOROTH</option><option value="INFRAROAD">INFRAROAD</option><option value="INFRAROADPAVEDPCNT">INFRAROADPAVEDPCNT</option><option value="INFRAROADRAI">INFRAROADRAI</option><option value="WATUSEPC">WATUSEPC</option><option value="WATDEMAND">WATDEMAND</option><option value="MALNCHP">MALNCHP</option><option value="MALNCHPSAM">MALNCHPSAM</option><option value="MS">MS</option><option value="PRI">PRI</option><option value="ST">ST</option><option value="VEHICFLPC">VEHICFLPC</option><option value="WP">WP</option><option value="XS">XS</option><option value="ZS">ZS</option><option value="AGLOSSCONS">AGLOSSCONS</option><option value="FPROFITR">FPROFITR</option><option value="INFRAROADTOTAL">INFRAROADTOTAL</option><option value="LANDIRAREAEQUIPDEM">LANDIRAREAEQUIPDEM</option><option value="MALNCHPSH">MALNCHPSH</option><option value="PROTEINPC">PROTEINPC</option><option value="RETRAT">RETRAT</option><option value="SDEATH">SDEATH</option><option value="WCLPC">WCLPC</option><option value="WFORST">WFORST</option></select><hr style="height:0px; visibility:hidden; margin-bottom:-1px;"><select class="dropdown shiny-bound-input" id="selectedBynetwork" style="width: 150px; height: 26px; display: inline;"><option value="">Select by group</option><option value="Agriculture">Agriculture</option><option value="Demography">Demography</option><option value="Economy">Economy</option><option value="Energy">Energy</option><option value="Environment">Environment</option><option value="Infrastructure">Infrastructure</option><option value="Interstate">Interstate</option><option value="Sociopolitical">Sociopolitical</option><option value="Water">Water</option></select><div id="maindivnetwork" style="height:95%;background-color: inherit;"><div id="legend_mainnetwork" style="float:right; width:20%;height:100%"><div style="font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:14px;text-align:center;">Color Legend</div><div id="legendnetwork" style="height:100%"><div class="vis-network" tabindex="900" style="position: relative; overflow: hidden; touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;"><canvas style="position: relative; touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;" width="225" height="1069"></canvas></div></div></div><div id="graphnetwork" style="float:left; width:80%;height:100%;background-color: inherit;"><div class="vis-network" tabindex="900" style="position: relative; overflow: hidden; touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;"><canvas style="position: relative; touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;" width="900" height="1069"></canvas><div class="vis-navigation"><div class="vis-button vis-up" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><div class="vis-button vis-down" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><div class="vis-button vis-left" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><div class="vis-button vis-right" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><div class="vis-button vis-zoomIn" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><div class="vis-button vis-zoomOut" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><div class="vis-button vis-zoomExtends" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div></div></div><div style="position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"></div><div id="footernetwork" style="font-family: Georgia, &quot;Times New Roman&quot;, Times, serif; font-size: 12px; text-align: center; background-color: inherit; display: none;"></div></div></div></div>
+        <button id="store_position" type="button" class="btn btn-default action-button shiny-bound-input">Stabilize Network</button>
+        <button id="Reset" type="button" class="btn btn-default action-button shiny-bound-input">Reset Model Selection</button>
+      </div>
+    </div>
+  </div>
+
+
+
+<div id="ss-connect-dialog" style="display: none;"></div><div id="ss-overlay" class="ss-gray-out" style="display: none;"></div><div id="ss-connect-dialog" style="display: none;"></div><div id="ss-overlay" class="ss-gray-out" style="display: none;"></div></body></html>
