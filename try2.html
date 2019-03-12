@@ -75,16 +75,16 @@
 <div class="wrap">  		
     <nav>
     
-<form method="POST" action="/action_page.php" >
+<form method="post" id="Myform">
 <input type="number" id="MyInput" name="tentacles"
-       min="10000" max="1000000"  >    
+       min="10000" max="1000000" value=100000  >    
       <input type="submit">
 </form> 
     
     
     <div id="timeline"></div>
   </nav>
-     <h3><u>Diagram with filters</u></h3>
+     <h3><u>Diagram showing migration above 100000 people</u></h3>
     <div id="diagram"></div>
  </div> 		
 
@@ -102,7 +102,7 @@
 (function ChartDraw()  {
        
       var data = 'json/migrations.json';
-      var inputval= window.document.getElementById("MyInput")
+      var inputval= document.getElementById("MyInput")
       console.log(inputval.value);
       var aLittleBit = Math.PI / 100000;
       //kbn testing below
