@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+	<title>Global international migration flows | Wittgenstein Centre</title>
+	<meta name=description content="Global Migration Data Sheet 2013: Unique estimates of migration flows between the top 50 sending and receiving countries.">
+	<meta name=viewport content="width=device-width, initial-scale=1.0">
+    
+  <link rel="icon" href="favicon.png" type="image/png">	
+    <link href="dist/app-v1.css" rel="stylesheet" media="all">
+
+	<!--[if lt IE 9]><script src=javascripts/html5shiv-printshiv.js></script><![endif]-->
+  <script src="dist/app-v1.js"></script>
+ <style>
+ body {
+      background-color: white;
+      text-align: center;
+      min-width: 460px;
+    }
+    #timeline {
+      position: relative;
+      margin-top: 3ex;
+    }
+    #diagram {
+      margin: 0 auto;
+      max-width: 800px;
+    }
+    footer {
+      position: absolute;
+      bottom: 1ex;
+      right: 0;
+    }
+    @media all and (max-width: 600px) {
+      .year label {
+        padding: 8px 15px 5px;
+        font-size: 13px;
+      }
+      svg {
+        font-size: 15px;
+      }
+      text.region {
+        font-size: 16px;
+      }
+
+    }
+    @media all and (max-width: 580px) {
+      .year label {
+        font-size: 11px;
+      }
+    }
+    @media all and (max-width: 500px) {
+      .year label {
+        font-size: 9px;
+      }
+    }
+
+
+    #myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 20%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+  </style>
+
+
+</head>
+
+<body>
+
+<div class="wrap">  		
+    <nav>
+    
+<form method="post" >
+<input type="number" id="MyInput" name="tentacles"
+       min="10000" max="1000000"  >    
+      <input type="submit">
+</form> 
+    
+    
+    <div id="timeline"></div>
+  </nav>
+     <h3><u>Diagram with filters</u></h3>
+    <div id="diagram"></div>
+ </div> 		
+
+<script>
+      function init(){
+         d3.select("#MyInput")
+         .on("click", function(d,i) {
+            
+            return document.getElementById("num").value
+        })
+}  	
+</script>
+
+<script>
+(function ChartDraw()  {
+       
+      var data = 'json/migrations.json';
+      var inputval= window.document.getElementById("MyInput")
+      console.log(inputval.value);
+      var aLittleBit = Math.PI / 100000;
+      //kbn testing below
+      //Notes: the object function is returning the first value. So year 2 is equal to 1990
+      
+      
+      
+      //console.log(inputval.value);
+      
+      //var year2 = Object.keys(data2.matrix)[0];
+      //var json= JSON.parse('json/migrations.json');
+      //var data2=data.filter(d => d.names== "North America"); 
+      //var data2 = data || { matrix: {}, names: [], regions: []};
+      //console.log((parser.value));
+      //kbn testing end    
+      d3.json(data, function(data) {
+        var now = 2005;
+        //console.log(now);
+        //console.log(Object.entries(data.matrix));
+        //console.log(data.matrix[now][0][1]);
+        var i=0;
+        var j=0;
+        for (var i=0; i<data.matrix[2005].length;i++){
+    for (var j=0; j<137;j++){
+    if (((data.matrix[2005][i][j])<=inputval.value)){
+        (data.matrix[2005][i][j])=0;
+        //console.log(data.matrix[2005]);        
+    }
+    }
+}
+       for (var i=0; i<data.matrix[1995].length;i++){
+    for (var j=0; j<137;j++){
+    if (((data.matrix[1995][i][j])<=inputval.value)){
+        (data.matrix[1995][i][j])=0;
+        //console.log((inputval.value))        
+    }
+    }
+}
+       for (var i=0; i<data.matrix[1990].length;i++){
+    for (var j=0; j<137;j++){
+    if (((data.matrix[1990][i][j])<=inputval.value)){
+        (data.matrix[1990][i][j])=0;
+        //console.log((inputval.value))        
+    }
+    }
+}
+      for (var i=0; i<data.matrix[2000].length;i++){
+    for (var j=0; j<137;j++){
+    if (((data.matrix[2000][i][j])<=inputval.value)){
+        (data.matrix[2000][i][j])=0;
+        //console.log((inputval.value))        
+    }
+    }
+}
+        var chart = Globalmigration.chart(data, {
+          element: '#diagram',
+          now: now,
+          animationDuration: 500,
+          margin: 125,
+          arcPadding: 0.04,
+          layout: {
+            alpha: 0,
+            threshold: 50000,
+            labelThreshold: 5000,
+            colors: 'cd3d08 ec8f00 6dae29 683f92 b60275 2058a5 00a592 009d3c 378974 ffca00'.split(' ').map(function(c) { return '#' + c; })
+          }
+        });
+
+        Globalmigration.timeline(chart, {
+          now: now,
+          element: '#timeline',
+          incr: 5
+        });
+
+        chart.draw(now);
+      });
+    })();
+
+    var _gaq=[['_setAccount','UA-42659946-1'],['_trackPageview']];(function(a,b){var c=a.createElement(b),d=a.getElementsByTagName(b)[0];c.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";d.parentNode.insertBefore(c,d)})(document,"script");
+</script>
+
+<script>
+function UpdateVal(){inputval= document.getElementById("myInput")
+      inputval.setAttribute('value',inputval.value)
+      return inputval.value
+}
+</script>
+</body>
+</html>

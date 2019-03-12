@@ -19,11 +19,20 @@
 </nav>
 
 <!-- Band Description -->
+  <script>
+function showText(text){
+    document.getElementById("text").innerHTML=text;
+}
+function hide(){
+    document.getElementById("text").innerHTML="";
+}
+</script>
 
 <section>
  <h2 class="w3-wide">Animations</h2>
  <p> 1. Leicester City winning the premier league in 2015-2016 EPL season   </p>
- <img src="LeicesterFinal.gif" alt="Leicester" style="width:60%; padding=1; height:5%">
+ <img src="LeicesterFinal.gif"  alt="Leicester" style="width:60%; padding=1; height:5%" onMouseOver="showText('This gif shows something that is')" onMouseOut="hide();">
+ <div id="text" align="top" style="border=1;"></div>
  <p> 2. Best teams of the EPL   </p>
  <img src="BestofPremLeg.gif" alt="Leicester" style="width:60%; padding=1; height:5%">
  <p> 3. Trends in neonatal and under 5 mortality over time   </p>
