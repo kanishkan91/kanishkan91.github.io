@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<body>
+
+<nav class="w3-bar w3-black">
+  <a href="/index" class="w3-button w3-bar-item">Summary</a>
+  <a href="/R-animations" class="w3-button w3-bar-item">Static Visualizations</a>
+  <a href="/R-Dynamic" class="w3-button w3-bar-item">Dynamic visualizations</a>
+  <a href="#Python-applications" class="w3-button w3-bar-item">Python applications</a>
+  <a href="#Tableau-visualizations" class="w3-button w3-bar-item">Tableau visualizations</a>
+  <a href="https://github.com/kanishkan91" class="w3-button w3-bar-item">Visit my github</a>
+</nav>
+
+</section>
+<section>
+
+
+<head></head>
+<body>
+<iframe id="example1" src="https://faoexplorer-flask-d3.herokuapp.com/" style="border: 1; width: 98%; height: 700px" frameborder="1"></iframe>
+<p><i>App deployed on and Heroku<i></p> 
+</body>
+
+
+</section>
+
+
+
+
+<script>
+// Automatic Slideshow - change image every 5 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 5000);
+}
+</script>
+
+</body>
+</html>
